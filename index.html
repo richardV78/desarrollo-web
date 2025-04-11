@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Chocolates Nicarao</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Estilos personalizados -->
-    <link href="estilos.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chocolates Nicarao</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/stilo.css" rel="stylesheet" type="text/css">
+    <script src="js/mai.js"></script>
 </head>
 <body>
-    <!-- Barra de navegación -->
+    <!-- INICIO DEL MENU DE NAVEGACIÓN -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -26,62 +27,161 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="defaultNavbar1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Inicio</a></li>
+                    <li class="active"><a href="index.html">Inicio<span class="sr-only">(current)</span></a></li>
                     <li><a href="#0101">Quienes Somos</a></li>
-                    <li><a href="laempresa.html">La Empresa</a></li>
-                    <li class="active"><a href="catalogo.html">Catálogo de chocolates<span class="sr-only">(current)</span></a></li>
-                    <li><a href="contactenos.html">Contáctenos</a></li>
+                    <li><a href="#0202">La Empresa</a></li>
+                    <li><a href="../catalogo.html">Catalogo de chocolates</a></li>
+                    <li><a href="../contactenos.html">Contáctenos</a></li>
                     <li><a href="admin.html">Administrador</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- FIN DEL MENÚ DE NAVEGACIÓN -->
 
-    <!-- Contenido del catálogo -->
-    <div class="container">
-        <h1>Catálogo de Chocolates Nicarao</h1>
-        <div class="row">
-            <!-- Chocolate 1 -->
-            <div class="col-md-4 col-sm-6 chocolate-card">
-                <img src="https://via.placeholder.com/300x200?text=Chocolate+Negro" alt="Chocolate Negro">
-                <h3>Chocolate Negro 70%</h3>
-                <p>Un chocolate intenso con notas de cacao puro, ideal para los amantes del sabor auténtico.</p>
+    <!-- INICIO DEL CARRUSEL -->
+    <div id="carousel1" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel1" data-slide-to="1"></li>
+            <li data-target="#carousel1" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="img/chocolate 1.jpg" alt="First slide image" class="img-responsive center-block">
+                <div class="carousel-caption">
+                    <h3></h3>
+                    <p></p>
+                </div>
             </div>
-            <!-- Chocolate 2 -->
-            <div class="col-md-4 col-sm-6 chocolate-card">
-                <img src="https://via.placeholder.com/300x200?text=Chocolate+con+Almendras" alt="Chocolate con Almendras">
-                <h3>Chocolate con Almendras</h3>
-                <p>Delicada mezcla de chocolate con leche y almendras crujientes, perfecta para compartir.</p>
+            <div class="item">
+                <img src="img/chocolates 2.jpg" alt="Second slide image" class="img-responsive center-block">
+                <div class="carousel-caption">
+                    <h3></h3>
+                    <p></p>
+                </div>
             </div>
-            <!-- Chocolate 3 -->
-            <div class="col-md-4 col-sm-6 chocolate-card">
-                <img src="https://via.placeholder.com/300x200?text=Chocolate+Blanco" alt="Chocolate Blanco">
-                <h3>Chocolate Blanco</h3>
-                <p>Suave y cremoso, nuestro chocolate blanco es una delicia dulce para cualquier ocasión.</p>
-            </div>
-            <!-- Chocolate 4 -->
-            <div class="col-md-4 col-sm-6 chocolate-card">
-                <img src="https://via.placeholder.com/300x200?text=Chocolate+con+Café" alt="Chocolate con Café">
-                <h3>Chocolate con Café</h3>
-                <p>Una fusión única de cacao y granos de café tostados para un sabor vibrante.</p>
-            </div>
-            <!-- Chocolate 5 -->
-            <div class="col-md-4 col-sm-6 chocolate-card">
-                <img src="https://via.placeholder.com/300x200?text=Chocolate+con+Naranja" alt="Chocolate con Naranja">
-                <h3>Chocolate con Naranja</h3>
-                <p>Chocolate negro con un toque cítrico de naranja, refrescante y sofisticado.</p>
-            </div>
-            <!-- Chocolate 6 -->
-            <div class="col-md-4 col-sm-6 chocolate-card">
-                <img src="https://via.placeholder.com/300x200?text=Trufas+de+Chocolate" alt="Trufas de Chocolate">
-                <h3>Trufas de Chocolate</h3>
-                <p>Exquisitas trufas artesanales con un corazón suave y un exterior crujiente.</p>
+            <div class="item">
+                <img src="img/Imagen de WhatsApp 2025-04-08 a las 20.45.06_e71e1c8a.jpg" alt="Third slide image" class="img-responsive center-block">
+                <div class="carousel-caption">
+                    <h3></h3>
+                    <p></p>
+                </div>
             </div>
         </div>
+        <a class="left carousel-control" href="#carousel1" role="button" data-slide="prev">
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel1" role="button" data-slide="next">
+            <span class="sr-only">Next</span>
+        </a>
     </div>
+    <!-- FIN DEL CARRUSEL -->
 
-    <!-- Bootstrap y jQuery JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- CONTENIDO DE LA PAGINA -->
+    <section class="container" id="0101">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="line"></div>
+                <h1>Chocolates Nicarao</h1>
+                <p>El nombre "Nicarao" evoca la esencia de Nicaragua, 
+                    resaltando su herencia cultural, histórica y la riqueza natural del cacao de alta calidad.
+                    Chocolates Nicarao se posiciona como una marca 
+                    premium de chocolate artesanal. </p>
+                <p>Productos gourmet 
+                    elaborados con ingredientes naturales, comprometidos con el comercio justo, 
+                    la sostenibilidad y la ética en cada proceso. Nuestro enfoque es brindar 
+                    experiencias sensoriales únicas y exclusivas a un público exigente.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de miniaturas con igual altura -->
+    <section class="container" align="center">
+        <div class="row row-equal-height">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="img/plantio.jpg" alt="Chocolate Amargo">
+                    <h6>Chocolates de alta calidad</h6>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="img/natural.jpg" alt="Trufa de Leche">
+                    <h6>100% Nicaraguenses</h6>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="img/fabrica.jpg" alt="Chocolate Blanco">
+                    <h6>Chocolates hecho en Nicaragua</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Nueva sección: Sobre la empresa -->
+   <section class="container company-section" id="0202">
+    <div class="content">
+        <h1>Chocolates Nicarao</h1>
+        <p>
+            Bienvenidos a Chocolates Nicarao, donde la tradición y la pasión por el cacao se unen 
+            para crear experiencias únicas. Desde 1501, hemos perfeccionado el arte de hacer chocolates 
+            artesanales, utilizando los mejores ingredientes de nuestra región.
+        </p>
+        <p>
+            Cada bocado cuenta una historia, conectando el pasado con el presente en un sabor que 
+            deleita los sentidos. ¡Descubre nuestra historia y únete a esta dulce tradición!
+        </p>
+        <a href="../catalogo.html" class="btn">Conoce nuestro catalogo de productos <span>&rarr;</span></a>
+    </div>
+</section>
+    <!-- FIN DEL CONTENIDO DE LA PAGINA -->
+
+    <!-- INICIO PIE DE PÁGINA -->
+    <footer>
+        <!-- Seccion 01 -->
+        <section class="pie01">
+            <div class="container">
+                <div class="row">
+                    <!-- Mapa del Sitio -->
+                    <div class="col-md-6">
+                        <h4>Mapa del Sitio</h4>
+                        <dl>
+                            <dt><a href="index.html">Inicio</a></dt>
+                            <dt><a href="#0101">Quienes Somos</a></dt>
+                            <dt><a href="laempresa.html">La Empresa</a></dt>
+                            <dt><a href="chocolates.html">Catálogo de chocolates</a></dt>
+                            <dt><a href="contactenos.html">Contáctenos</a></dt>
+                        </dl>
+                    </div>
+                    <!-- Datos de Contactos -->
+                    <div class="col-md-6">
+                        <h4>Datos de Contácto</h4>
+                        <address>
+                            Dirección: Semafaros de Villa Fontana<br>
+                            <abbr title="phone">Teléfono:</abbr>(505)2234-5678<br>
+                            E-mail:<a href="mailto:info@choc_nicarao.com.ni">info@choc_nicarao.com.ni</a><br>
+                            Horario de atención: 8:00am-5:00pm<br>
+                            Facebook ׀ Twitter
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion 02 -->
+        <section class="pie02">
+            <div class="container">
+                © copyright 2025 Chocolates Nicarao - Desarrollado por: Grupo de Marketing Chocholates Nicarao
+            </div>
+        </section>
+    </footer>
+    <!-- FIN PIE DE PÁGINA -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>
