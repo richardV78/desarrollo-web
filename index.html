@@ -8,7 +8,35 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/stilo.css" rel="stylesheet" type="text/css">
-    <script src="js/mai.js"></script>
+    <!-- Estilos adicionales -->
+    <style>
+        /* Asegurar espacio para la barra fija */
+        body {
+            padding-top: 70px;
+        }
+        /* Desplazamiento suave */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Compensar la barra fija en las secciones */
+        section[id="0101"], section[id="0202"] {
+            padding-top: 70px;
+            margin-top: -70px;
+        }
+        /* Ajustar el carrusel para que no se superponga con la barra */
+        .carousel {
+            margin-top: 0;
+        }
+        /* Aumentar espacio entre Sección 02 y Sección 03 */
+        section.company-section {
+            margin-top: 60px; /* Más espacio encima de la Sección 03 */
+        }
+        /* Reducir altura del recuadro en Sección 03 */
+        section.company-section .content {
+            padding: 20px; /* Menos padding para reducir la altura */
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
     <!-- INICIO DEL MENU DE NAVEGACIÓN -->
@@ -30,8 +58,8 @@
                     <li class="active"><a href="index.html">Inicio<span class="sr-only">(current)</span></a></li>
                     <li><a href="#0101">Quienes Somos</a></li>
                     <li><a href="#0202">La Empresa</a></li>
-                    <li><a href="../catalogo.html">Catalogo de chocolates</a></li>
-                    <li><a href="../contactenos.html">Contáctenos</a></li>
+                    <li><a href="../capas/catalogo.html">Catálogo de chocolates</a></li>
+                    <li><a href="../capas/contactenos.html">Contáctenos</a></li>
                     <li><a href="admin.html">Administrador</a></li>
                 </ul>
             </div>
@@ -48,24 +76,18 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="img/chocolate 1.jpg" alt="First slide image" class="img-responsive center-block">
+                <img src="../desarrollo-web/img/chocolate 1.jpg" alt="Chocolate artesanal" class="img-responsive center-block">
                 <div class="carousel-caption">
-                    <h3></h3>
-                    <p></p>
                 </div>
             </div>
             <div class="item">
-                <img src="img/chocolates 2.jpg" alt="Second slide image" class="img-responsive center-block">
+                <img src="img/chocolates 2.jpg" alt="Variedad de chocolates" class="img-responsive center-block">
                 <div class="carousel-caption">
-                    <h3></h3>
-                    <p></p>
                 </div>
             </div>
             <div class="item">
-                <img src="img/Imagen de WhatsApp 2025-04-08 a las 20.45.06_e71e1c8a.jpg" alt="Third slide image" class="img-responsive center-block">
+                <img src="img/chocolates 2.jpg" alt="Chocolates Nicarao" class="img-responsive center-block">
                 <div class="carousel-caption">
-                    <h3></h3>
-                    <p></p>
                 </div>
             </div>
         </div>
@@ -79,6 +101,7 @@
     <!-- FIN DEL CARRUSEL -->
 
     <!-- CONTENIDO DE LA PAGINA -->
+    <!-- Sección 01 -->
     <section class="container" id="0101">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center">
@@ -97,7 +120,7 @@
         </div>
     </section>
 
-    <!-- Sección de miniaturas con igual altura -->
+    <!-- Sección 02: Miniaturas -->
     <section class="container" align="center">
         <div class="row row-equal-height">
             <div class="col-md-4">
@@ -115,33 +138,33 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <img src="img/fabrica.jpg" alt="Chocolate Blanco">
-                    <h6>Chocolates hecho en Nicaragua</h6>
+                    <h6>Chocolates hechos en Nicaragua</h6>
                 </div>
             </div>
         </div>
     </section>
 
-   <!-- Nueva sección: Sobre la empresa -->
-   <section class="container company-section" id="0202">
-    <div class="content">
-        <h1>Chocolates Nicarao</h1>
-        <p>
-            Bienvenidos a Chocolates Nicarao, donde la tradición y la pasión por el cacao se unen 
-            para crear experiencias únicas. Desde 1501, hemos perfeccionado el arte de hacer chocolates 
-            artesanales, utilizando los mejores ingredientes de nuestra región.
-        </p>
-        <p>
-            Cada bocado cuenta una historia, conectando el pasado con el presente en un sabor que 
-            deleita los sentidos. ¡Descubre nuestra historia y únete a esta dulce tradición!
-        </p>
-        <a href="../catalogo.html" class="btn">Conoce nuestro catalogo de productos <span>&rarr;</span></a>
-    </div>
-</section>
+    <!-- Sección 03: Sobre la empresa -->
+    <section class="container company-section" id="0202">
+        <div class="content">
+            <h1>Chocolates Nicarao</h1>
+            <p>
+                Bienvenidos a Chocolates Nicarao, donde la tradición y la pasión por el cacao se unen 
+                para crear experiencias únicas. Desde 1501, hemos perfeccionado el arte de hacer chocolates 
+                artesanales, utilizando los mejores ingredientes de nuestra región.
+            </p>
+            <p>
+                Cada bocado cuenta una historia, conectando el pasado con el presente en un sabor que 
+                deleita los sentidos. ¡Descubre nuestra historia y únete a esta dulce tradición!
+            </p>
+            <a href="catalogo.html" class="btn">Conoce nuestro catálogo de productos <span>→</span></a>
+        </div>
+    </section>
     <!-- FIN DEL CONTENIDO DE LA PAGINA -->
 
     <!-- INICIO PIE DE PÁGINA -->
     <footer>
-        <!-- Seccion 01 -->
+        <!-- Sección 01 -->
         <section class="pie01">
             <div class="container">
                 <div class="row">
@@ -151,29 +174,29 @@
                         <dl>
                             <dt><a href="index.html">Inicio</a></dt>
                             <dt><a href="#0101">Quienes Somos</a></dt>
-                            <dt><a href="laempresa.html">La Empresa</a></dt>
-                            <dt><a href="chocolates.html">Catálogo de chocolates</a></dt>
-                            <dt><a href="contactenos.html">Contáctenos</a></dt>
+                            <dt><a href="#0202">La Empresa</a></dt>
+                            <dt<li><a href="../capas/catalogo.html">Catálogo de chocolates</a></li></dt>
+                            <dt<li><a href="../capas/contactenos.html">Contáctenos</a></li></dt>
                         </dl>
                     </div>
                     <!-- Datos de Contactos -->
                     <div class="col-md-6">
-                        <h4>Datos de Contácto</h4>
+                        <h4>Datos de Contacto</h4>
                         <address>
-                            Dirección: Semafaros de Villa Fontana<br>
-                            <abbr title="phone">Teléfono:</abbr>(505)2234-5678<br>
-                            E-mail:<a href="mailto:info@choc_nicarao.com.ni">info@choc_nicarao.com.ni</a><br>
+                            Dirección: Semáforos de Villa Fontana<br>
+                            <abbr title="phone">Teléfono:</abbr> +505 8911 4744<br>
+                            E-mail: <a href="mailto:info@choc_nicarao.com.ni">info@choc_nicarao.com.ni</a><br>
                             Horario de atención: 8:00am-5:00pm<br>
-                            Facebook ׀ Twitter
+                            Facebook | Twitter
                         </address>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Seccion 02 -->
+        <!-- Sección 02 -->
         <section class="pie02">
             <div class="container">
-                © copyright 2025 Chocolates Nicarao - Desarrollado por: Grupo de Marketing Chocholates Nicarao
+                © copyright 2025 Chocolates Nicarao - Desarrollado por: Grupo de Marketing Chocolates Nicarao
             </div>
         </section>
     </footer>
@@ -183,5 +206,23 @@
     <script src="js/jquery-1.11.3.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.js"></script>
+    <!-- Script personalizado -->
+    <script src="js/mai.js"></script>
+    <!-- Script para desplazamiento suave -->
+    <script>
+        $(document).ready(function() {
+            $('a[href*="#"]').on('click', function(e) {
+                if (this.hash !== "") {
+                    e.preventDefault();
+                    var hash = this.hash;
+                    if ($(hash).length) {
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top - 70
+                        }, 500);
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
