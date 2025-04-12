@@ -1,6 +1,6 @@
 ﻿/* Estilos generales */
 body {
-    padding-top: 50px;
+    padding-top: 70px; /* Ajustado de 50px a 70px para coincidir con index.html */
     font-family: 'Arial', sans-serif;
 }
 
@@ -74,6 +74,7 @@ body {
     border-radius: 10px;
     border: 1px solid #eee;
     overflow: hidden;
+    padding: 0; /* Asegurar que no haya padding extra */
 }
 
 .thumbnail img {
@@ -94,6 +95,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Estilo específico para el thumbnail en Sección 01 (sin imagen) */
+section#0101 .thumbnail {
+    display: block; /* No flex para texto */
+    padding: 20px;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+section#0101 .thumbnail h1,
+section#0101 .thumbnail p {
+    margin: 10px 0;
+    color: #5D4037;
 }
 
 .thumbnail:hover {
@@ -128,6 +145,7 @@ footer .pie02 {
 .company-section {
     text-align: center;
     margin: 50px auto;
+    margin-top: 60px; /* De index.html */
     padding: 40px;
     width: 85%;
     max-width: 1000px;
@@ -140,7 +158,8 @@ footer .pie02 {
 .company-section .content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px; /* De index.html */
+    box-sizing: border-box; /* De index.html */
 }
 
 .btn {
@@ -199,4 +218,15 @@ footer .pie02 {
 .row-equal-height > [class*='col-'] {
     display: flex;
     flex-direction: column;
+}
+
+/* Compensar la barra fija en las secciones */
+section[id="0101"], section[id="0202"] {
+    padding-top: 70px;
+    margin-top: -70px;
+}
+
+/* Ajustar el carrusel para que no se superponga con la barra */
+.carousel {
+    margin-top: 0;
 }

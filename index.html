@@ -29,12 +29,36 @@
         }
         /* Aumentar espacio entre Sección 02 y Sección 03 */
         section.company-section {
-            margin-top: 60px; /* Más espacio encima de la Sección 03 */
+            margin-top: 60px;
         }
         /* Reducir altura del recuadro en Sección 03 */
         section.company-section .content {
-            padding: 20px; /* Menos padding para reducir la altura */
+            padding: 20px;
             box-sizing: border-box;
+        }
+        /* Estilos para el recuadro en Sección 01 */
+        section#0101 .thumbnail {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+        /* Estilos para los recuadros en Sección 02 */
+        section.container .thumbnail {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+        /* Efecto hover para todos los thumbnails */
+        .thumbnail {
+            transition: all 0.3s ease;
+        }
+        .thumbnail:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
         }
     </style>
 </head>
@@ -76,12 +100,12 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="../desarrollo-web/img/chocolate 1.jpg" alt="Chocolate artesanal" class="img-responsive center-block">
+                <img src="../desarrollo-web/img/carrucel1.jpg" alt="Chocolate artesanal" class="img-responsive center-block">
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
-                <img src="img/chocolates 2.jpg" alt="Variedad de chocolates" class="img-responsive center-block">
+                <img src="img/carrucel2.jpg" alt="Variedad de chocolates" class="img-responsive center-block">
                 <div class="carousel-caption">
                 </div>
             </div>
@@ -105,17 +129,18 @@
     <section class="container" id="0101">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center">
-                <div class="line"></div>
-                <h1>Chocolates Nicarao</h1>
-                <p>El nombre "Nicarao" evoca la esencia de Nicaragua, 
-                    resaltando su herencia cultural, histórica y la riqueza natural del cacao de alta calidad.
-                    Chocolates Nicarao se posiciona como una marca 
-                    premium de chocolate artesanal. </p>
-                <p>Productos gourmet 
-                    elaborados con ingredientes naturales, comprometidos con el comercio justo, 
-                    la sostenibilidad y la ética en cada proceso. Nuestro enfoque es brindar 
-                    experiencias sensoriales únicas y exclusivas a un público exigente.
-                </p>
+                <div class="thumbnail">
+                    <div class="line"></div>
+                    <h1>Chocolates Nicarao</h1>
+                    <p>El nombre "Nicarao" evoca la esencia de Nicaragua, 
+                        resaltando su herencia cultural, histórica y la riqueza natural del cacao de alta calidad.
+                        Chocolates Nicarao se posiciona como una marca 
+                        premium de chocolate artesanal.</p>
+                    <p>Productos gourmet 
+                        elaborados con ingredientes naturales, comprometidos con el comercio justo, 
+                        la sostenibilidad y la ética en cada proceso. Nuestro enfoque es brindar 
+                        experiencias sensoriales únicas y exclusivas a un público exigente.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -175,8 +200,8 @@
                             <dt><a href="index.html">Inicio</a></dt>
                             <dt><a href="#0101">Quienes Somos</a></dt>
                             <dt><a href="#0202">La Empresa</a></dt>
-                            <dt<li><a href="../capas/catalogo.html">Catálogo de chocolates</a></li></dt>
-                            <dt<li><a href="../capas/contactenos.html">Contáctenos</a></li></dt>
+                            <dt><a href="../capas/catalogo.html">Catálogo de chocolates</a></dt>
+                            <dt><a href="../capas/contactenos.html">Contáctenos</a></dt>
                         </dl>
                     </div>
                     <!-- Datos de Contactos -->
